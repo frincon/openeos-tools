@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!--
+ Copyright 2014 Fernando Rincon Martin <frm.rincon@gmail.com>
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.openeos.tools.it</groupId>
+	<artifactId>test1</artifactId>
+	<version>testing</version>
+	<packaging>jar</packaging>
+	<name>test1</name>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.openeos.tools</groupId>
+				<artifactId>generate-entities-maven-plugin</artifactId>
+				<version>@pom.version@</version>
+				<configuration>
+					<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
+					<url>jdbc:derby:${project.build.directory}/sampleDB;create=true</url>
+					<searchpath>OSGI-INF/liquibase/*.xml</searchpath>
+					<jdbcConfigurationConfigurationFile>src/main/resources/hibernate.cfg.xml</jdbcConfigurationConfigurationFile>
+					<jdbcConfigurationPackageName>${pom.artifactId}.model</jdbcConfigurationPackageName>
+					<jdbcConfigurationRevengFile>src/main/resources/hibernate.reveng.xml</jdbcConfigurationRevengFile>
+					<jdbcConfigurationReverseStrategy>org.openeos.tools.hibernate.hbm2java.UnoReverseEngineeringStrategy</jdbcConfigurationReverseStrategy>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate-entities</goal>
+						</goals>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.derby</groupId>
+						<artifactId>derby</artifactId>
+						<version>10.9.1.0</version>
+					</dependency>
+					<dependency>
+						<groupId>org.openeos.tools</groupId>
+						<artifactId>org.openeos.tools.hibernate.hbm2java</artifactId>
+						<version>0.0.1-SNAPSHOT</version>
+					</dependency>
+					<dependency>
+						<groupId>org.hibernate</groupId>
+						<artifactId>hibernate-core</artifactId>
+						<version>4.0.0.Final</version>
+					</dependency>
+					<dependency>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-api</artifactId>
+						<version>1.6.6</version>
+					</dependency>
+					<dependency>
+						<groupId>cglib</groupId>
+						<artifactId>cglib</artifactId>
+						<version>2.2.2</version>
+					</dependency>
+
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.3.4.Final</version>
+		</dependency>
+	</dependencies>
+</project>

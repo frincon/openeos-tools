@@ -1,0 +1,8 @@
+.classpath
+.project
+.settings
+target
+local-plugins/*.jar
+*~
+assembly/*/runner
+derby.log
