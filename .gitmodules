@@ -1,0 +1,3 @@
+[submodule "hibernate-tools"]
+        path = external-dependencies/hibernate-tools
+        url = https://github.com/frincon/hibernate-tools.git
