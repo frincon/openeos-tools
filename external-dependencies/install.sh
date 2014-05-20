@@ -1,6 +1,3 @@
 #!/bin/bash
 
-
-cd hibernate-tools
-mvn clean install
-cd ..
+cd hibernate-tools && mvn clean install && cd .. > /dev/null
