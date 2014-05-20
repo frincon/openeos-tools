@@ -24,6 +24,7 @@
 	</parent>
 	<artifactId>org.openeos.tools.bndplugin</artifactId>
 	<packaging>bundle</packaging>
+	<name>OpenEOS Tools BndPlugin</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
