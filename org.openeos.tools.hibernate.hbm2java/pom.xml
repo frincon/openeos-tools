@@ -27,9 +27,9 @@
 	<name>OpenEOS Tools Hbm2Java</name>
 	<dependencies>
 		<dependency>
-			<groupId>org.hibernate</groupId>
+			<groupId>org.openeos.external.org.hibernate</groupId>
 			<artifactId>hibernate-tools</artifactId>
-			<version>4.0.0-CR1-UNO</version>
+			<version>4.0.0-CR1.OPENEOS.SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
