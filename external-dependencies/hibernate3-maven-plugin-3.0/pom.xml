@@ -22,7 +22,7 @@
 
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>hibernate3-maven-plugin</artifactId>
-  <version>3.0.UNO</version>
+  <version>3.0.OPENEOS.SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>Hibernate3 Maven Plugin</name>
@@ -130,9 +130,9 @@
 
     <!-- Hibernate Dependencies -->
     <dependency>
-      <groupId>org.hibernate</groupId>
+      <groupId>org.openeos.external.org.hibernate</groupId>
       <artifactId>hibernate-tools</artifactId>
-      <version>4.0.0-CR1-UNO</version>
+      <version>4.0.0-CR1.OPENEOS.SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
