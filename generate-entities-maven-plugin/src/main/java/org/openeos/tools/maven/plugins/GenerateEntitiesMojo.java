@@ -258,7 +258,7 @@ public class GenerateEntitiesMojo extends AbstractMojo {
 	private void callHbm2Java() throws MojoExecutionException {
 		getLog().info("Calling hbm2java...");
 		List<Dependency> dependencies = getPlugin().getDependencies();
-		Plugin plugin = plugin("org.codehaus.mojo", "hibernate3-maven-plugin", "3.0.UNO", dependencies);
+		Plugin plugin = plugin("org.codehaus.mojo", "hibernate3-maven-plugin", "3.0.OPENEOS.SNAPSHOT", dependencies);
 		Element jdbcConfiguration = element(
 				name("jdbcconfiguration"),
 				null,
