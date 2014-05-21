@@ -50,7 +50,7 @@
 
 	<scm>
 		<url>https://github.com/frincon/openeos-tools</url>
-		<connection>scm:git:https://github.com/frincon/abstractform.git</connection>
+		<connection>scm:git:https://github.com/frincon/openeos-tools.git</connection>
 		<developerConnection>scm:git:git@github.com:frincon/openeos-tools.git</developerConnection>
 	</scm>
 
