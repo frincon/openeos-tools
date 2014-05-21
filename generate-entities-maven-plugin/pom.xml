@@ -143,7 +143,7 @@
 		<dependency>
 			<groupId>org.codehaus.mojo</groupId>
 			<artifactId>hibernate3-maven-plugin</artifactId>
-			<version>3.0.UNO</version>
+			<version>3.0.OPENEOS.SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
