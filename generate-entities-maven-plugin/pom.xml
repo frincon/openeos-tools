@@ -24,7 +24,7 @@
 	</parent>
 	<artifactId>generate-entities-maven-plugin</artifactId>
 	<packaging>maven-plugin</packaging>
-	<name>generate-entities-maven-plugin Maven Mojo</name>
+	<name>OpenEOS Tools Generate Entities Maven Plugin</name>
 	<build>
 		<plugins>
 			<plugin>
@@ -76,6 +76,7 @@
 					<cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
 					<settingsFile>src/it/settings.xml</settingsFile>
 					<!-- <mavenExecutable>/usr/bin/mvnDebug</mavenExecutable> -->
+					<streamLogs>true</streamLogs>
 				</configuration>
 				<executions>
 					<execution>
